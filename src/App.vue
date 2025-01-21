@@ -1,20 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CabeceraInicio />
+  <PhotoLinks :buttons="[
+        { text: 'GitHub', link: 'https://github.com/sualetedev', variant: 'dark', icon: 'fab fa-github' },
+        { text: 'LinkedIn', link: 'https://www.linkedin.com/in/alejandro-izquierdo-garcia-8333a9114/', variant: 'primary', icon: 'fab fa-linkedin' }
+      ]"
+    />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CabeceraInicio from './components/CabeceraInicio.vue'
+import PhotoLinks from './components/PhotoLinks.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CabeceraInicio, PhotoLinks,
   }
 }
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
